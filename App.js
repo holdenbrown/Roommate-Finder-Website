@@ -3,6 +3,7 @@ import React from 'react';
 import Login from './login'; 
 import Page2 from './page2';
 import Directory from './directory';
+import Operator from './operator';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,12 +16,12 @@ class App extends React.Component {
     }
   }
 
-  nextPage() {
-    this.setState({curPage : this.state.curPage + 1});
+  nextPage(numPages) {
+    this.setState({curPage : this.state.curPage + numPages});
   }
 
-  previousPage() {
-    this.setState({curPage : this.state.curPage - 1});
+  previousPage(numPages) {
+    this.setState({curPage : this.state.curPage - numPages});
   }
 
   render() {
@@ -33,7 +34,7 @@ class App extends React.Component {
     } else if (this.state.curPage === 2) {
       return (
         <div className='App'>
-          <Directory previousPage = {this.previousPage} nextPage = {this.nextPage}/>
+          <Directory nextPage = {this.nextPage}/>
         </div>
       )
     }
@@ -41,6 +42,13 @@ class App extends React.Component {
       return (
         <div className='App'>
           <Page2 previousPage = {this.previousPage} nextPage = {this.nextPage}/>
+        </div>
+      )
+    }
+    else if (this.state.curPage === 4) {
+      return (
+        <div className='App'>
+          <Operator nextPage = {this.nextPage}/>
         </div>
       )
     }
