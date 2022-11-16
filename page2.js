@@ -27,7 +27,7 @@ class Page2 extends React.Component {
                     <input type="range" className="form-range" min="0" max="2" step="1" id="customRange3"/>
                     <label htmlFor="customRange3" className="form-label">How often do you wet the bed (1-3)</label>
                     <input type="range" className="form-range" min="0" max="2" step="1" id="customRange3"/>
-                    <button type="submit" className="btn btn-primary" onClick={() => this.props.previousPage()}>Submit</button>
+                    <button type="submit" className="btn btn-primary" onClick={() => this.props.previousPage(1)}>Submit</button>
                     </form>
                 </div>
                     
