@@ -8,6 +8,8 @@ class Login extends React.Component {
         let emailFound = false;
         let passwordFound = false;
         DB.accounts.forEach(element => {
+            emailFound = false;
+            passwordFound = false;
             if (element.email === email.value) {
                 emailFound = true;
             }
@@ -15,7 +17,12 @@ class Login extends React.Component {
                 passwordFound = true;
             }
             if (emailFound && passwordFound) {
-                this.props.nextPage();
+                console.log(element.id.charAt(0));
+                if (element.id.charAt(0) === 'A') {
+                    this.props.nextPage(3);
+                } else {
+                    this.props.nextPage(1);
+                }
             }
         });
         if (email.classList.contains('is-valid')) {
@@ -53,7 +60,7 @@ class Login extends React.Component {
                         <form className="needs-validation" id="form" noValidate>
                             <div className="mb-3 needs-validation">
                                 <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                                <input type="email" className="form-control" id="exampleInputEmail1"/>
+                                <input type="email" className="form-control" id="exampleInputEmail1" />
                                 <div className="valid-feedback">
                                     Looks good!
                                 </div>
