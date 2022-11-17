@@ -4,6 +4,7 @@ import Login from './login';
 import Page2 from './page2';
 import Directory from './directory';
 import Operator from './operator';
+import Progress from './progress';
 
 class App extends React.Component {
   constructor(props) {
@@ -49,6 +50,13 @@ class App extends React.Component {
       return (
         <div className='App'>
           <Operator nextPage = {this.nextPage}/>
+        </div>
+      )
+    }
+    else if (this.state.curPage === 5) {
+      return (
+        <div className='App'>
+          <Progress previousPage = {this.previousPage}/>
         </div>
       )
     }
