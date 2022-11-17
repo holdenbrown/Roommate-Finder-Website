@@ -17,7 +17,6 @@ class Login extends React.Component {
                 passwordFound = true;
             }
             if (emailFound && passwordFound) {
-                console.log(element.id.charAt(0));
                 if (element.id.charAt(0) === 'A') {
                     this.props.nextPage(3);
                 } else {
