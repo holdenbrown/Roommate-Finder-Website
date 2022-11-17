@@ -1,0 +1,24 @@
+{
+  "studentsAnswered": 16375,
+
+  "totalStudents": 29481,
+
+  "timeUsed": 1526843,
+
+  "totalTime": 5184000,
+
+  "accounts": [
+    {
+      "id": "A12456",
+      "name": "John Smith",
+      "email": "john.smith@iastate.edu",
+      "password": "1234"
+    },
+    {
+      "id": "B25497",
+      "name": "Jane Doe",
+      "email": "jane.doe@iastate.edu",
+      "password": "1234"
+    }
+  ]
+}
