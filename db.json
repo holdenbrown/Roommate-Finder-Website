@@ -12,13 +12,29 @@
       "id": "A12456",
       "name": "John Smith",
       "email": "john.smith@iastate.edu",
-      "password": "1234"
+      "password": "1234",
+      "score": 27
     },
     {
       "id": "B25497",
       "name": "Jane Doe",
       "email": "jane.doe@iastate.edu",
-      "password": "1234"
+      "password": "1234",
+      "score": 27
+    },
+    {
+      "id": "B25497",
+      "name": "Julio Doe",
+      "email": "jul.doe@iastate.edu",
+      "password": "1234",
+      "score": 27
+    },
+    {
+      "id": "B25497",
+      "name": "Jax Doe",
+      "email": "jax.doe@iastate.edu",
+      "password": "1234",
+      "score": 27
     }
   ]
 }
