@@ -1,0 +1,18 @@
+#progressBar {
+    height: 50px;
+    width: 300px;
+}
+
+#row {
+    margin: 150px;
+    justify-content: center;
+}
+
+#return {
+    width: 250px;
+    margin: 100px;
+}
+
+p {
+    font-size: x-large;
+}
