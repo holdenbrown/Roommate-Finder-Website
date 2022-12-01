@@ -1,18 +1,19 @@
 {
   "studentsAnswered": [
     {
-      "value": 16375
+      "value": 3,
+      "id": 1
     }
   ],
   "totalStudents": [
     {
-      "value": 29481
+      "value": 10
     }
   ],
   "timeUsed": [
     {
-      "value": 3967310,
-      "id": 56
+      "value": 3994297,
+      "id": 75
     }
   ],
   "totalTime": [
@@ -31,14 +32,7 @@
       "name": "John Smith",
       "email": "john.smith@iastate.edu",
       "password": "1234",
-      "score": 27
-    },
-    {
-      "id": "B25497",
-      "name": "Jane Doe",
-      "email": "jane.doe@iastate.edu",
-      "password": "1234",
-      "score": 27
+      "score": null
     },
     {
       "id": "B68512",
@@ -51,6 +45,13 @@
       "id": "B27819",
       "name": "Jax Doe",
       "email": "jax.doe@iastate.edu",
+      "password": "1234",
+      "score": 27
+    },
+    {
+      "id": "B25497",
+      "name": "Jane Doe",
+      "email": "jane.doe@iastate.edu",
       "password": "1234",
       "score": 27
     }
