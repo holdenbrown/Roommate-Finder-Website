@@ -3,8 +3,14 @@ import DB from './db.json';
 
 class RoomieEmail extends React.Component{
     displayRoomies = () => { // eslint-disable-next-line
+        let i;
+        for (i = 0; i < DB.accounts.length; i++) {
+            if (DB.accounts[i].id === localStorage.getItem("userID")) {
+                break;
+            }
+        }
         const roomies = DB.accounts.map(el => {
-            if (Math.abs(el.score - localStorage.getItem("roomScore") <= 3)){
+            if (Math.abs(el.score - DB.accounts[i].score <= 3) && el.id != DB.accounts[i].id){
                 console.log(el.name);
                return (<li>{el.name}</li>)
             }
