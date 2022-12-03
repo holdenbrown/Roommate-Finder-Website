@@ -10,7 +10,7 @@ class RoomieEmail extends React.Component{
             }
         } // eslint-disable-next-line
         const roomies = DB.accounts.map(el => {
-            if (Math.abs(el.score - DB.accounts[i].score <= 3) && el.id !== DB.accounts[i].id){
+            if (Math.abs(el.score - DB.accounts[i].score) <= 3 && el.id !== DB.accounts[i].id){
                 console.log(el.name);
                return (<li>{el.name}</li>)
             }
