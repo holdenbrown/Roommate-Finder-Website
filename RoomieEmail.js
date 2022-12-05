@@ -29,6 +29,7 @@ class RoomieEmail extends React.Component{
                         <div className="col-sm-12">
                             <h1>Roomates that you would have a good experience with</h1>
                             {this.displayRoomies()}
+                            <button type="button" className="btn btn-primary" onClick={() => this.props.previousPage(2)}>Back</button>
                         </div>
                     </div>
                 </div>
