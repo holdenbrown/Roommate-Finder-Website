@@ -17,8 +17,15 @@ describe("App.js",()=>{
         expect(text).toContain("Roommify");
     })
 
-    test('validating name field', async () =>{
+    it('creates account and signs into it', async () =>{
         await page.goto("http://localhost:3000");
+        await page.screenshot({path: '1.png'});
+
+        //gets to sign in page from create account page and creates an account with the folloing information
+        let button = await page.waitForXPath('//*[@id="form"]/button[2]');
+        await button.click();
+        await page.screenshot({path: '2.png'});
+
         let searchText_name = await page.waitForXPath('//*[@id="exampleInputName1"]');
         await searchText_name.type("John Smith");
 
@@ -28,18 +35,42 @@ describe("App.js",()=>{
         let searchText_password = await page.waitForXPath('//*[@id="exampleInputPassword1"]');
         await searchText_password.type("1234");
 
-        // const test = await page.waitForSelector('data-testid="Create_account_button"')
+        let button2 = await page.waitForXPath('//*[@id="form"]/button');
+        await button2.click();
+        
+        //signs into the account that was created
+        let email = await page.waitForXPath('//*[@id="exampleInputEmail1"]');
+        await email.type('john.smith@iastate.edu');
+
+        let password = await page.waitForXPath('//*[@id="exampleInputPassword1"]');
+        await password.type('1234');
+        await page.screenshot({path: '3.png'});
+
+
+        let sub = await page.waitForXPath('//*[@id="form"]/button[1]');
+        await sub.click();
+        await page.screenshot({path: '4.png'});
+        
     })
+
+    // it('signs in and updates preferences then checks roommates', async () =>{
+    //     await page.goto("http://localhost:3000");
+    //     page.setDefaultNavigationTimeout(0); 
+        
+    //     //signs into the account that was created
+    //     let email = await page.waitForXPath('//*[@id="exampleInputEmail1"]');
+    //     await email.type('john.smith@iastate.edu');
+
+    //     let password = await page.waitForXPath('//*[@id="exampleInputPassword1"]');
+    //     await password.type('1234');
+
+    //     //updates preferences
+        // let sub = await page.waitForXPath('//*[@id="form"]/button[1]');
+        // await sub.click('//*[@id="form"]/button[1]');
+    //     await page.waitForTimeout(5000);
+    //     await page.screenshot({path: 'ex.png'});
+        
+    // })
 
     afterAll(()=>browser.close());
 });
-
-// test('validating first name field', async () =>{
-//     const broswer = await Puppeteer.launch();
-//     const page = await broswer.newPage();
-//     const app = 'file:///C:/Users/Mr. Mister/Dropbox/se 319/final/app/src/createAccount.js'
-//     await page.goto(app);
-
-//     await page.click('input#firstname');
-//     await page.type('input#firstname', ' ');
-// })
