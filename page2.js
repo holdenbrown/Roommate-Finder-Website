@@ -11,25 +11,25 @@ class Page2 extends React.Component {
                 <div className="col-sm-12" id="page2">
                     <div className="col-sm-6 offset-sm-3">
                         <form>
-                            <label htmlFor="customRange3" className="form-label">How school oriented are you (1-3)</label>
-                            <input type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
+                            <label  htmlFor="customRange3" className="form-label">How school oriented are you (1-3)</label>
+                            <input data-testid="slider1" type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
                             <label htmlFor="customRange3" className="form-label">How often do you like to go out (1-3)</label>
-                            <input type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
-                            <label htmlFor="customRange3" className="form-label">How prone are you to break the law (1-3)</label>
-                            <input type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
+                            <input data-testid="slider2" type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
+                            <label htmlFor="customRange3" className="form-label">How social are you (1-3)</label>
+                            <input data-testid="slider3 "type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
                             <label htmlFor="customRange3" className="form-label">How much do you like to sleep (1-3)</label>
-                            <input type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
-                            <label htmlFor="customRange3" className="form-label">How likley are you to drink and drive (1-3)</label>
-                            <input type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
+                            <input data-testid="slider4" type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
+                            <label htmlFor="customRange3" className="form-label">How much partying will you do (1-3)</label>
+                            <input data-testid="slider5" type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
                             <label htmlFor="customRange3" className="form-label">How adventrous are you (1-3)</label>
-                            <input type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
+                            <input data-testid="slider6" type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
                             <label htmlFor="customRange3" className="form-label">How much will you be home (1-3)</label>
-                            <input type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
-                            <label htmlFor="customRange3" className="form-label">How often do you wet the bed (1-3)</label>
-                            <input type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
-                            <label htmlFor="customRange3" className="form-label">How often do you wet the bed (1-3)</label>
-                            <input type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
-                            <button type="submit" className="btn btn-primary" onClick={(event) => {
+                            <input data-testid="slider7" type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
+                            <label htmlFor="customRange3" className="form-label">How hard is your major (1-3)</label>
+                            <input data-testid="slider8" type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
+                            <label htmlFor="customRange3" className="form-label">How often will you visit home (1-3)</label>
+                            <input data-testid="slider9" type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
+                            <button data-testid="survey-submit" type="submit" className="btn btn-primary" onClick={(event) => {
                                 event.preventDefault()
                                 const inputs = document.getElementsByTagName("input")
                                 let roomScore = 0;
