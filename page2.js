@@ -10,6 +10,7 @@ class Page2 extends React.Component {
             <div className="container">
                 <div className="col-sm-12" id="page2">
                     <div className="col-sm-6 offset-sm-3">
+                        <h1>Select 1-3 based on personal preferences</h1>
                         <form>
                             <label  htmlFor="customRange3" className="form-label">How school oriented are you (1-3)</label>
                             <input data-testid="slider1" type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
@@ -29,8 +30,9 @@ class Page2 extends React.Component {
                             <input data-testid="slider8" type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
                             <label htmlFor="customRange3" className="form-label">How often will you visit home (1-3)</label>
                             <input data-testid="slider9" type="range" className="form-range" min="0" max="2" step="1" id="customRange3" />
-                            <button data-testid="survey-submit" type="submit" className="btn btn-primary" onClick={(event) => {
+                            <button data-testid="survey-submit" id="urmom" type="submit" className="btn btn-primary" onClick={(event) => {
                                 event.preventDefault()
+                                this.props.previousPage(1);
                                 const inputs = document.getElementsByTagName("input")
                                 let roomScore = 0;
                                 for (let i = 0; i < inputs.length; i++) {
@@ -72,7 +74,6 @@ class Page2 extends React.Component {
                                         body: JSON.stringify(account)
                                     })
                                 });
-                                this.props.previousPage(1)
 
                             }}
                             >Submit</button>
