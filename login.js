@@ -67,6 +67,47 @@ class Login extends React.Component {
         }
     }
 
+    //only used for testing because puppeteer doesnt work well with a db.json server
+    verify_test() {
+        let email = document.getElementById('exampleInputEmail1');
+        let password = document.getElementById('exampleInputPassword1');
+        let emailFound = false;
+        let passwordFound = false;
+        for (let i = 0; i < DB.accounts.length; i++) {
+            let element = DB.accounts[i];
+            if (element.email === email.value) {
+                emailFound = true;
+            }
+            if (element.password === password.value) {
+                passwordFound = true;
+            }
+            if (emailFound && passwordFound) {
+                if (element.id.charAt(0) === 'A') {
+                    this.nextPage('A', element.id);
+                    this.props.nextPage(2);//added for testing only
+                } else {
+                    this.nextPage('B', element.id);
+                    this.props.nextPage(3);//added for testing only
+                }
+                break;
+            }
+        }
+        email.classList.remove('is-valid');
+        email.classList.remove('is-invalid');
+        password.classList.remove('is-valid');
+        password.classList.remove('is-invalid');
+        if (!emailFound) {
+            email.classList.add('is-invalid');
+        } else {
+            email.classList.add('is-valid');
+        }
+        if (!passwordFound) {
+            password.classList.add('is-invalid');
+        } else {
+            password.classList.add('is-valid');
+        }
+    }
+
     render() {
         return (
             <div className="container">
@@ -98,6 +139,7 @@ class Login extends React.Component {
                             </div>
                             <button type="button" className="btn btn-primary" onClick={() => this.verify()}>Submit</button>
                             <button type="button" className="btn btn-primary" onClick={() => this.props.nextPage(1)}>Create Account</button>
+                            <button id="test_only" type="button" className="btn btn-primary" onClick={() => this.verify_test()}>Submit</button>
                         </form>
                     </div>
                     <div className="col-3"></div>
