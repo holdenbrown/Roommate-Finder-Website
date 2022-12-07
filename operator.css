@@ -1,13 +1,13 @@
 #progressBar {
-    height: 50px;
-    width: 300px;
+    height: 100%;
+    width: 75%;
 }
 
 #row {
-    margin: 150px;
+    margin: 10%;
     justify-content: center;
 }
 
 p {
-    font-size: x-large;
+    font-size: 150%;
 }
