@@ -1,2 +1,2 @@
 # Roommate-Finder-Website
-This project uses react and javascript to make a website that helps students at a university find roommates. There are two sides to this website a student side where they take a survery
+This project uses react and javascript to make a website that helps students at a university find roommates. There are two sides to this website a student side where students take a survery and get the emailes of other students with similar interests. A json file is used to store student accounts and data. The other side of the website is for the university and it stores information about how many students need to find roommates. The different sides of the website can be reached by signing in with different accounts.
